@@ -12,19 +12,32 @@
   a{text-decoration:none;color:inherit}
   .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
-  .brand{display:flex;align-items:center;gap:11px}
-  .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#7C5AC8,#5D3EA8);display:grid;place-items:center;box-shadow:0 4px 12px rgba(109,76,187,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;min-height:66px;padding:10px 0;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .logo{width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:linear-gradient(135deg,#7C5AC8,#5D3EA8);display:grid;place-items:center;box-shadow:0 4px 12px rgba(109,76,187,.25)}
   .logo svg{width:20px;height:20px}
-  .brand strong{font-family:var(--serif);font-size:18px;display:block;line-height:1.1}
-  .brand span{font-size:11.5px;color:var(--muted)}
-  .nav-actions{display:flex;align-items:center;gap:14px}
-  .nav-link{font-size:14px;font-weight:600;color:var(--muted)}
+  .brand strong{font-family:var(--serif);font-size:18px;display:block;line-height:1.1;white-space:nowrap}
+  .brand span{font-size:11.5px;color:var(--muted);display:block;white-space:nowrap}
+  .nav-actions{display:flex;align-items:center;gap:14px;flex-shrink:0}
+  .nav-link{font-size:14px;font-weight:600;color:var(--muted);white-space:nowrap}
   .nav-link:hover{color:var(--lilac)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--lilac);color:#fff;font-weight:700;padding:12px 22px;border-radius:99px;font-size:14.5px;transition:.16s;box-shadow:0 8px 20px rgba(109,76,187,.24)}
   .btn:hover{background:var(--lilac-dark);transform:translateY(-1px)}
   .btn-lg{padding:16px 32px;font-size:16.5px}
-  .btn-sm{padding:9px 18px;font-size:13.5px}
+  .btn-sm{padding:9px 18px;font-size:13.5px;white-space:nowrap}
+  @media(max-width:640px){
+    .wrap{padding:0 16px}
+    .nav{min-height:60px;padding:8px 0}
+    .logo{width:34px;height:34px;flex:0 0 34px;border-radius:10px}
+    .logo svg{width:18px;height:18px}
+    .brand strong{font-size:16px}
+    .brand span{font-size:10.5px}
+    .nav-link{display:none}
+    .btn-sm{padding:8px 14px;font-size:13px}
+    .hero{padding:36px 0 36px}
+    .hero p.lead{font-size:16px}
+    .btn-lg{padding:14px 22px;font-size:15px;width:100%}
+  }
   .hero{padding:64px 0 52px;text-align:center}
   .pill{display:inline-flex;align-items:center;gap:8px;background:var(--lilac-soft);color:var(--lilac);border:1px solid var(--lilac-mid);padding:6px 15px;border-radius:99px;font-size:12.5px;font-weight:700;margin-bottom:20px}
   .hero h1{font-family:var(--serif);font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.6px;max-width:820px;margin:0 auto 18px}
@@ -77,7 +90,7 @@
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="../">
+    <a class="brand" href="/recursos">
       <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h20"/><path d="M13 20V3.5a.5.5 0 0 0-.65-.48l-6 2A.5.5 0 0 0 6 5.5V20"/><circle cx="10" cy="12" r=".75" fill="#fff"/></svg></div>
       <div><strong>Vine a Terapia</strong><span>Biblioteca Psicológica</span></div>
     </a>
@@ -141,12 +154,12 @@
       <p>Haz clic en cualquier tarjeta para ampliar la vista previa de nuestros recursos rediseñados.</p>
     </div>
     <div class="samples">
-      <div class="sample" onclick="openImg('muestras/01-toc.png')"><img src="muestras/01-toc.png" alt="Ficha TOC" loading="lazy"><div class="cap">Psicoeducación: Qué es el TOC<span>Ampliar</span></div></div>
-      <div class="sample" onclick="openImg('muestras/02-perfeccionismo.png')"><img src="muestras/02-perfeccionismo.png" alt="Ficha Perfeccionismo" loading="lazy"><div class="cap">Desentrañar el Perfeccionismo<span>Ampliar</span></div></div>
-      <div class="sample" onclick="openImg('muestras/03-ansiedad.png')"><img src="muestras/03-ansiedad.png" alt="Ficha Ansiedad" loading="lazy"><div class="cap">Aplazamiento de la Preocupación<span>Ampliar</span></div></div>
-      <div class="sample" onclick="openImg('muestras/04-infantil.png')"><img src="muestras/04-infantil.png" alt="Material Duelo Infantil" loading="lazy"><div class="cap">Material Visual: Duelo Infantil<span>Ampliar</span></div></div>
-      <div class="sample" onclick="openImg('muestras/05-contrato.png')"><img src="muestras/05-contrato.png" alt="Contrato Terapéutico" loading="lazy"><div class="cap">Contrato Terapéutico<span>Ampliar</span></div></div>
-      <div class="sample" onclick="openImg('muestras/06-trauma.png')"><img src="muestras/06-trauma.png" alt="Ventana de Tolerancia" loading="lazy"><div class="cap">Ventana de Tolerancia · Trauma<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/01-rosenberg.png')"><img src="muestras/01-rosenberg.png" alt="Escala de Autoestima de Rosenberg" loading="lazy"><div class="cap">Escala de Autoestima de Rosenberg<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/02-gad7.png')"><img src="muestras/02-gad7.png" alt="Escala de Ansiedad GAD-7" loading="lazy"><div class="cap">Escala de Ansiedad GAD-7<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/03-registro-pensamientos.png')"><img src="muestras/03-registro-pensamientos.png" alt="Registro de Pensamientos" loading="lazy"><div class="cap">Registro de Pensamientos<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/04-termometro.png')"><img src="muestras/04-termometro.png" alt="Termómetro Emocional" loading="lazy"><div class="cap">Termómetro Emocional<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/05-rueda-vida.png')"><img src="muestras/05-rueda-vida.png" alt="Rueda de la Vida" loading="lazy"><div class="cap">Rueda de la Vida<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/06-registro-emociones.png')"><img src="muestras/06-registro-emociones.png" alt="Registro de Emociones" loading="lazy"><div class="cap">Registro de Emociones<span>Ampliar</span></div></div>
     </div>
   </section>
 
