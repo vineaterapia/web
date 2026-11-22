@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Biblioteca Psicológica (+900 Recursos Clínicos) — Vine a Terapia</title>
+<meta name="description" content="Accede a más de 900 fichas clínicas en PDF, protocolos, material infanto-juvenil y cuadernillos listos para usar en sesión. Pago único con acceso inmediato." />
+<style>
+  :root{--lilac:#6D4CBB;--lilac-dark:#56389E;--lilac-soft:#EDE6FA;--lilac-mid:#DFD3F8;--paper:#F7F4FC;--white:#FFFFFF;--ink:#2A2142;--muted:#6D6187;--line:#E6DDF5;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#7C5AC8,#5D3EA8);display:grid;place-items:center;box-shadow:0 4px 12px rgba(109,76,187,.25)}
+  .logo svg{width:20px;height:20px}
+  .brand strong{font-family:var(--serif);font-size:18px;display:block;line-height:1.1}
+  .brand span{font-size:11.5px;color:var(--muted)}
+  .nav-actions{display:flex;align-items:center;gap:14px}
+  .nav-link{font-size:14px;font-weight:600;color:var(--muted)}
+  .nav-link:hover{color:var(--lilac)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--lilac);color:#fff;font-weight:700;padding:12px 22px;border-radius:99px;font-size:14.5px;transition:.16s;box-shadow:0 8px 20px rgba(109,76,187,.24)}
+  .btn:hover{background:var(--lilac-dark);transform:translateY(-1px)}
+  .btn-lg{padding:16px 32px;font-size:16.5px}
+  .btn-sm{padding:9px 18px;font-size:13.5px}
+  .hero{padding:64px 0 52px;text-align:center}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--lilac-soft);color:var(--lilac);border:1px solid var(--lilac-mid);padding:6px 15px;border-radius:99px;font-size:12.5px;font-weight:700;margin-bottom:20px}
+  .hero h1{font-family:var(--serif);font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.6px;max-width:820px;margin:0 auto 18px}
+  .hero h1 em{font-style:italic;color:var(--lilac)}
+  .hero p.lead{font-size:18px;color:var(--muted);max-width:680px;margin:0 auto 30px}
+  .hero-cta{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .micro{font-size:13px;color:var(--muted)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:44px auto 0;max-width:920px}
+  .stat{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:18px 14px;box-shadow:0 4px 16px rgba(72,48,125,.05)}
+  .stat strong{display:block;font-family:var(--serif);font-size:28px;color:var(--lilac);line-height:1.1}
+  .stat span{font-size:13px;color:var(--muted);font-weight:500}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+  section{padding:56px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 38px}
+  .sec-head .kicker{font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--lilac);margin-bottom:8px}
+  .sec-head h2{font-family:var(--serif);font-size:clamp(26px,3.6vw,36px);line-height:1.15;margin-bottom:10px}
+  .sec-head p{color:var(--muted);font-size:15.5px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:760px){.grid-2{grid-template-columns:1fr}}
+  .box{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 4px 18px rgba(72,48,125,.05)}
+  .box h3{font-family:var(--serif);font-size:21px;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+  .box p{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .tag{background:var(--lilac-soft);color:var(--ink);font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:99px}
+  .samples{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:860px){.samples{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.samples{grid-template-columns:1fr}}
+  .sample{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;transition:.16s;box-shadow:0 4px 16px rgba(72,48,125,.05)}
+  .sample:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(72,48,125,.12)}
+  .sample img{width:100%;height:190px;object-fit:cover;object-position:top center;display:block;border-bottom:1px solid var(--line)}
+  .sample .cap{padding:12px 14px;font-size:13.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+  .sample .cap span{font-size:11.5px;color:var(--lilac);font-weight:600}
+  .offer{background:linear-gradient(135deg,#2A2142,#413068);color:#fff;border-radius:24px;padding:44px 32px;text-align:center;box-shadow:0 20px 50px rgba(42,33,66,.22)}
+  .offer h2{font-family:var(--serif);font-size:clamp(28px,4vw,38px);margin-bottom:10px}
+  .offer p.sub{color:#D9CEF0;max-width:560px;margin:0 auto 24px;font-size:15.5px}
+  .price{font-family:var(--serif);font-size:48px;font-weight:700;margin-bottom:6px}
+  .price small{font-family:sans-serif;font-size:15px;font-weight:500;color:#CBB6EE}
+  .perks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px;max-width:620px;margin:24px auto 30px;text-align:left;font-size:14.5px;color:#EDE6FA}
+  @media(max-width:600px){.perks{grid-template-columns:1fr}}
+  .faq{max-width:760px;margin:0 auto;display:grid;gap:12px}
+  details{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+  summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:15px}
+  details p{margin-top:10px;color:var(--muted);font-size:14px}
+  footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:13.5px}
+  .modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(28,20,46,.72);padding:20px;align-items:center;justify-content:center}
+  .modal.open{display:flex}
+  .modal img{max-width:92vw;max-height:86vh;border-radius:12px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="../">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h20"/><path d="M13 20V3.5a.5.5 0 0 0-.65-.48l-6 2A.5.5 0 0 0 6 5.5V20"/><circle cx="10" cy="12" r=".75" fill="#fff"/></svg></div>
+      <div><strong>Vine a Terapia</strong><span>Biblioteca Psicológica</span></div>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-link" href="#muestras">Ver muestras</a>
+      <a class="btn btn-sm" href="https://pay.hotmart.com/R108605945W" target="_blank" rel="noopener">Acceder ahora</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="pill">Acceso inmediato · +900 fichas clínicas en PDF</div>
+    <h1>Deja de diseñar fichas desde cero. <em>Todo tu repertorio clínico</em> listo para usar.</h1>
+    <p class="lead">Más de 900 recursos en español latinoamericano —psicoeducación, registros, protocolos, material infanto-juvenil y cuadernillos— con campos rellenables e interactivos y listos para imprimir o enviar a tus pacientes.</p>
+    <div class="hero-cta">
+      <a class="btn btn-lg" href="https://pay.hotmart.com/R108605945W" target="_blank" rel="noopener">Obtener acceso completo · $29.99 USD →</a>
+      <span class="micro">Pago único sin suscripciones · Conversión automática a tu moneda local (opción en cuotas disponible)</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>901+</strong><span>Recursos en PDF</span></div>
+      <div class="stat"><strong>32</strong><span>Carpetas clínicas</span></div>
+      <div class="stat"><strong>100%</strong><span>Rellenables e imprimibles</span></div>
+      <div class="stat"><strong>∞</strong><span>Actualizaciones incluidas</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <div class="kicker">Qué hay adentro</div>
+      <h2>Organizado por temática, enfoque terapéutico y etapa</h2>
+      <p>Encuentra en segundos lo que necesitas con el buscador integrado de la biblioteca.</p>
+    </div>
+    <div class="grid-2">
+      <div class="box">
+        <h3>📂 Biblioteca Psicológica</h3>
+        <p>Fichas visuales de psicoeducación, autorregistros y ejercicios organizados por motivo de consulta.</p>
+        <div class="tags"><span class="tag">Ansiedad</span><span class="tag">Depresión</span><span class="tag">Autoestima</span><span class="tag">Regulación emocional</span><span class="tag">Trauma</span><span class="tag">Estrés</span><span class="tag">TDAH</span><span class="tag">TCA</span><span class="tag">TOC</span><span class="tag">Familia y vínculos</span><span class="tag">Perfeccionismo</span></div>
+      </div>
+      <div class="box">
+        <h3>🧰 Herramientas de sesión</h3>
+        <p>Protocolos, entrevistas, consentimientos informados, planes de tratamiento y técnicas basadas en evidencia.</p>
+        <div class="tags"><span class="tag">TCC</span><span class="tag">ACT</span><span class="tag">DBT</span><span class="tag">Mindfulness</span><span class="tag">Terapia de esquemas</span><span class="tag">Sistémica</span><span class="tag">Neurociencias</span><span class="tag">Evaluación</span><span class="tag">Documentos clínicos</span></div>
+      </div>
+      <div class="box">
+        <h3>🧩 Material infanto-juvenil</h3>
+        <p>Recursos adaptados con lenguaje cercano y visual para trabajar con niños, adolescentes y familias.</p>
+        <div class="tags"><span class="tag">TDAH infantil</span><span class="tag">Ansiedad infantil</span><span class="tag">Comportamiento</span><span class="tag">Duelo infantil</span><span class="tag">Fichas de anamnesis</span></div>
+      </div>
+      <div class="box">
+        <h3>👑 Cuadernillos para pacientes</h3>
+        <p>Cuadernillos de ejercicios pensados para entregar a libre demanda o con tus instrucciones entre sesiones.</p>
+        <div class="tags"><span class="tag">Trabajo entre sesiones</span><span class="tag">Listos para entregar</span><span class="tag">Nuevas entregas continuas</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="muestras">
+    <div class="sec-head">
+      <div class="kicker">Vista previa real</div>
+      <h2>Mira las fichas por dentro</h2>
+      <p>Haz clic en cualquier tarjeta para ampliar la vista previa de nuestros recursos rediseñados.</p>
+    </div>
+    <div class="samples">
+      <div class="sample" onclick="openImg('muestras/01-toc.png')"><img src="muestras/01-toc.png" alt="Ficha TOC" loading="lazy"><div class="cap">Psicoeducación: Qué es el TOC<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/02-perfeccionismo.png')"><img src="muestras/02-perfeccionismo.png" alt="Ficha Perfeccionismo" loading="lazy"><div class="cap">Desentrañar el Perfeccionismo<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/03-ansiedad.png')"><img src="muestras/03-ansiedad.png" alt="Ficha Ansiedad" loading="lazy"><div class="cap">Aplazamiento de la Preocupación<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/04-infantil.png')"><img src="muestras/04-infantil.png" alt="Material Duelo Infantil" loading="lazy"><div class="cap">Material Visual: Duelo Infantil<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/05-contrato.png')"><img src="muestras/05-contrato.png" alt="Contrato Terapéutico" loading="lazy"><div class="cap">Contrato Terapéutico<span>Ampliar</span></div></div>
+      <div class="sample" onclick="openImg('muestras/06-trauma.png')"><img src="muestras/06-trauma.png" alt="Ventana de Tolerancia" loading="lazy"><div class="cap">Ventana de Tolerancia · Trauma<span>Ampliar</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="offer">
+      <h2>Acceso completo a toda la Biblioteca</h2>
+      <p class="sub">Un solo pago para ahorrar horas de preparación cada semana y entregar material visual profesional a tus pacientes.</p>
+      <div class="price">$29.99 <small>USD · Pago único</small></div>
+      <div class="perks">
+        <div>✓ +900 fichas en PDF alta calidad</div>
+        <div>✓ Campos interactivos rellenables</div>
+        <div>✓ Acceso inmediato tras el pago</div>
+        <div>✓ Buscador web privado 24/7</div>
+        <div>✓ Actualizaciones futuras sin costo</div>
+        <div>✓ Garantía de satisfacción de 7 días</div>
+      </div>
+      <a class="btn btn-lg" style="background:#fff;color:var(--ink)" href="https://pay.hotmart.com/R108605945W" target="_blank" rel="noopener">Comprar ahora con acceso inmediato →</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <div class="kicker">Dudas frecuentes</div>
+      <h2>Antes de adquirir tu acceso</h2>
+    </div>
+    <div class="faq">
+      <details><summary>¿En qué formato vienen los recursos?</summary><p>Todos los archivos están en PDF en español latinoamericano. Además de estar listos para imprimir, los documentos son interactivos y cuentan con campos rellenables, facilitando su uso directamente desde dispositivos móviles, tablets o computadores.</p></details>
+      <details><summary>¿Cómo recibo el acceso después de pagar?</summary><p>Apenas el pago se acredita (lo que no demora más de un par de minutos), recibes automáticamente en tu correo el PDF de bienvenida con el botón de acceso directo a la biblioteca privada para navegar y descargar lo que necesites cuando quieras.</p></details>
+      <details><summary>¿Puedo comprar desde cualquier país?</summary><p>Sí. Nuestra plataforma detecta automáticamente el país desde donde realizas la compra, aunque también te da la opción de escoger manualmente tu zona y moneda. Si te encuentras en Venezuela, puedes escribirnos a <a href="mailto:vineaterapia@gmail.com" style="color:var(--lilac);font-weight:600">vineaterapia@gmail.com</a> para coordinar otras opciones de pago.</p></details>
+      <details><summary>¿Es una suscripción mensual o un pago único?</summary><p>Es un pago único. No hay cobros recurrentes ni mensualidades, e incluye las actualizaciones que se vayan sumando al repositorio.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Vine a Terapia</strong> · vineaterapia.com · Consultas: <a href="mailto:vineaterapia@gmail.com" style="color:var(--lilac);font-weight:600">vineaterapia@gmail.com</a>
+  </div>
+</footer>
+
+<div class="modal" id="imgModal" onclick="this.classList.remove('open')"><img id="modalImg" src="" alt="Vista previa"></div>
+<script>
+function openImg(src){document.getElementById('modalImg').src=src;document.getElementById('imgModal').classList.add('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('imgModal').classList.remove('open')});
+</script>
+</body>
+</html>
