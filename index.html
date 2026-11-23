@@ -92,13 +92,15 @@
   .psy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
   @media(max-width:1020px){.psy-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.psy-grid{grid-template-columns:1fr}}
-  .psy-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;box-shadow:0 6px 22px rgba(72,48,125,.05);transition:.2s}
+  .psy-card{background:var(--white);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 22px rgba(72,48,125,.05);transition:.2s}
   .psy-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(72,48,125,.12);border-color:var(--lilac-mid)}
-  .psy-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-  .avatar{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#EDE6FA,#D7C5F6);color:var(--lilac-dark);font-family:var(--serif);font-weight:700;font-size:18px;display:grid;place-items:center;flex-shrink:0}
-  .psy-top h3{font-family:var(--serif);font-size:18.5px;line-height:1.15}
-  .psy-top span{font-size:12px;color:var(--muted)}
-  .psy-spec{display:inline-block;background:var(--lilac-soft);color:var(--lilac-dark);font-size:12px;font-weight:700;padding:5px 11px;border-radius:99px;margin-bottom:12px;align-self:flex-start}
+  .psy-photo{height:220px;width:100%;overflow:hidden;background:var(--lilac-soft);border-bottom:1px solid var(--line)}
+  .psy-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .35s ease}
+  .psy-card:hover .psy-photo img{transform:scale(1.04)}
+  .psy-body{padding:20px;display:flex;flex-direction:column;flex:1}
+  .psy-body h3{font-family:var(--serif);font-size:19px;line-height:1.15;margin-bottom:3px}
+  .psy-body .psy-mode{font-size:12px;color:var(--muted);display:block;margin-bottom:10px}
+  .psy-spec{display:inline-block;background:var(--lilac-soft);color:var(--lilac-dark);font-size:12px;font-weight:700;padding:5px 11px;border-radius:99px;margin-bottom:11px;align-self:flex-start}
   .psy-card p{font-size:13.8px;color:var(--muted);margin-bottom:18px;flex:1}
 
   /* Testimonios */
@@ -203,28 +205,40 @@
     </div>
     <div class="psy-grid">
       <article class="psy-card" data-cat="pareja">
-        <div class="psy-top"><div class="avatar">CR</div><div><h3>Psic. Camila Rojas</h3><span>Online · Adultos y parejas</span></div></div>
+        <div class="psy-photo"><img src="https://images.unsplash.com/photo-1714976694810-85add1a29c96?auto=format&fit=crop&w=600&q=80" alt="Psic. Camila Rojas" loading="lazy"></div>
+        <div class="psy-body">
+          <h3>Psic. Camila Rojas</h3>
+          <span class="psy-mode">Online · Adultos y parejas</span>
         <span class="psy-spec">Terapia de pareja</span>
         <p>Acompañamiento en comunicación afectiva, reconstrucción de confianza, acuerdos y manejo constructivo de crisis vinculares.</p>
-        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Terapia%20de%20pareja">Agendar sesión →</a>
+        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Terapia%20de%20pareja">Agendar sesión →</a></div>
       </article>
       <article class="psy-card" data-cat="personalidad">
-        <div class="psy-top"><div class="avatar">MS</div><div><h3>Psic. Mateo Silva</h3><span>Online · Adultos</span></div></div>
+        <div class="psy-photo"><img src="https://plus.unsplash.com/premium_photo-1682096252599-e8536cd97d2b?auto=format&fit=crop&w=600&q=80" alt="Psic. Mateo Silva" loading="lazy"></div>
+        <div class="psy-body">
+          <h3>Psic. Mateo Silva</h3>
+          <span class="psy-mode">Online · Adultos</span>
         <span class="psy-spec">Trastornos de la personalidad</span>
         <p>Trabajo clínico profundo en regulación emocional, patrones relacionales complejos, terapia de esquemas y habilidades DBT.</p>
-        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Personalidad">Agendar sesión →</a>
+        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Personalidad">Agendar sesión →</a></div>
       </article>
       <article class="psy-card" data-cat="autoestima">
-        <div class="psy-top"><div class="avatar">SH</div><div><h3>Psic. Sofía Herrera</h3><span>Online · Jóvenes y adultos</span></div></div>
+        <div class="psy-photo"><img src="https://images.unsplash.com/photo-1779369495842-7a16b773f4b9?auto=format&fit=crop&w=600&q=80" alt="Psic. Sofía Herrera" loading="lazy"></div>
+        <div class="psy-body">
+          <h3>Psic. Sofía Herrera</h3>
+          <span class="psy-mode">Online · Jóvenes y adultos</span>
         <span class="psy-spec">Autoestima, ansiedad y depresión</span>
         <p>Abordaje de la autocrítica, estados de ánimo bajos, agotamiento emocional y construcción de hábitos acordes a tus valores.</p>
-        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Autoestima%20y%20animo">Agendar sesión →</a>
+        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Autoestima%20y%20animo">Agendar sesión →</a></div>
       </article>
       <article class="psy-card" data-cat="ansiedad">
-        <div class="psy-top"><div class="avatar">DM</div><div><h3>Psic. Diego Morales</h3><span>Online · Adultos</span></div></div>
+        <div class="psy-photo"><img src="https://images.unsplash.com/photo-1757744705465-ea08b0ddc38a?auto=format&fit=crop&w=600&q=80" alt="Psic. Diego Morales" loading="lazy"></div>
+        <div class="psy-body">
+          <h3>Psic. Diego Morales</h3>
+          <span class="psy-mode">Online · Adultos</span>
         <span class="psy-spec">Trastornos de ansiedad y pánico</span>
         <p>Intervención cognitivo-conductual en crisis de pánico, agorafobia, rumiación y recuperación de la autonomía cotidiana.</p>
-        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Ansiedad%20y%20panico">Agendar sesión →</a>
+        <a class="btn btn-sm" href="mailto:vineaterapia@gmail.com?subject=Agendar%20sesi%C3%B3n%20-%20Ansiedad%20y%20panico">Agendar sesión →</a></div>
       </article>
     </div>
   </section>
