@@ -110,6 +110,15 @@
   .t-author{border-top:1px solid var(--line);padding-top:12px;font-size:13px}
   .t-author strong{display:block;color:var(--ink);font-size:14px}
   .t-author span{color:var(--muted)}
+  .mobile-cta{display:none}
+  @media(max-width:640px){
+    body{padding-bottom:78px}
+    .promo-bar{padding:7px 12px;font-size:12px}
+    .promo-inner{gap:8px}
+    .timer span{padding:2px 6px;min-width:28px;font-size:12px}
+    .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));align-items:center;justify-content:center;box-shadow:0 -8px 24px rgba(42,33,66,.12)}
+    .mobile-cta .btn{width:100%;padding:13px 18px;font-size:14.5px}
+  }
 </style>
 </head>
 <body>
@@ -124,15 +133,15 @@
       <a class="btn btn-sm" href="https://pay.hotmart.com/R108605945W" target="_blank" rel="noopener">Acceder ahora</a>
     </div>
   </div>
-</header>
-<div class="promo-bar">
-  <div class="promo-inner">
-    <span class="promo-text">Oferta de lanzamiento: accede hoy por <span style="text-decoration:line-through;opacity:.68">$39.99</span> <strong>$29.99 USD</strong> (pago único) · Termina en</span>
-    <div class="timer" aria-label="Tiempo restante de oferta">
-      <span id="t-hrs">00</span>:<span id="t-min">14</span>:<span id="t-sec">59</span>
+  <div class="promo-bar">
+    <div class="promo-inner">
+      <span class="promo-text">Oferta de lanzamiento: accede hoy por <span style="text-decoration:line-through;opacity:.68">$39.99</span> <strong>$29.99 USD</strong> (pago único) · Termina en</span>
+      <div class="timer" aria-label="Tiempo restante de oferta">
+        <span id="t-hrs">00</span>:<span id="t-min">14</span>:<span id="t-sec">59</span>
+      </div>
     </div>
   </div>
-</div>
+</header>
 
 <main class="wrap">
   <section class="hero">
@@ -286,6 +295,10 @@
     <strong>Vine a Terapia</strong> · vineaterapia.com · Consultas: <a href="mailto:vineaterapia@gmail.com" style="color:var(--lilac);font-weight:600">vineaterapia@gmail.com</a>
   </div>
 </footer>
+
+<div class="mobile-cta">
+  <a class="btn" href="https://pay.hotmart.com/R108605945W" target="_blank" rel="noopener">Obtener acceso · <span style="text-decoration:line-through;opacity:.72;font-weight:500">$39.99</span> $29.99 USD →</a>
+</div>
 
 <div class="modal" id="imgModal" onclick="this.classList.remove('open')"><img id="modalImg" src="" alt="Vista previa"></div>
 <script>
