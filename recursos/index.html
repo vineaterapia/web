@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Biblioteca Psicológica (+900 Recursos Clínicos) — Vine a Terapia</title>
+<title>Biblioteca Psicológica (+1.000 Recursos Clínicos) — Vine a Terapia</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="description" content="Accede a más de 900 fichas clínicas en PDF, protocolos, material infanto-juvenil y cuadernillos listos para usar en sesión. Pago único con acceso inmediato." />
+<meta name="description" content="Accede a más de 1.000 fichas clínicas en PDF, protocolos, material infanto-juvenil y cuadernillos listos para usar en sesión. Pago único con acceso inmediato." />
 <style>
   :root{--lilac:#6D4CBB;--lilac-dark:#56389E;--lilac-soft:#EDE6FA;--lilac-mid:#DFD3F8;--paper:#F7F4FC;--white:#FFFFFF;--ink:#2A2142;--muted:#6D6187;--line:#E6DDF5;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -86,6 +86,30 @@
   .modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(28,20,46,.72);padding:20px;align-items:center;justify-content:center}
   .modal.open{display:flex}
   .modal img{max-width:92vw;max-height:86vh;border-radius:12px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+  .promo-bar{background:linear-gradient(90deg,#2A2142,#413068);color:#fff;padding:10px 16px;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .promo-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;text-align:center}
+  .promo-text strong{color:#EDE6FA}
+  .timer{display:inline-flex;align-items:center;gap:5px;font-variant-numeric:tabular-nums;font-weight:800}
+  .timer span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);padding:3px 8px;border-radius:8px;min-width:34px;display:inline-block;text-align:center;color:#fff}
+  .search-showcase{display:grid;grid-template-columns:1.05fr 1.15fr;gap:28px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 10px 30px rgba(72,48,125,.07)}
+  .search-copy .kicker{font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--lilac);margin-bottom:8px}
+  .search-copy h2{font-family:var(--serif);font-size:clamp(24px,3.2vw,32px);line-height:1.15;margin-bottom:12px}
+  .search-copy p{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .search-list{list-style:none;display:grid;gap:9px;font-size:14px;color:var(--ink)}
+  .search-list li{display:flex;align-items:flex-start;gap:8px}
+  .search-list li b{color:var(--lilac)}
+  .search-media{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 32px rgba(72,48,125,.12)}
+  .search-media img{width:100%;height:auto;display:block}
+  .mid-cta{text-align:center;margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:10px}
+  @media(max-width:860px){.search-showcase{grid-template-columns:1fr;padding:22px}}
+  .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:860px){.testimonials{grid-template-columns:1fr}}
+  .t-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 4px 18px rgba(72,48,125,.05);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+  .t-stars{color:#E0A82E;font-size:14px;letter-spacing:2px;margin-bottom:8px}
+  .t-quote{color:var(--ink);font-size:14.5px;line-height:1.6}
+  .t-author{border-top:1px solid var(--line);padding-top:12px;font-size:13px}
+  .t-author strong{display:block;color:var(--ink);font-size:14px}
+  .t-author span{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -101,18 +125,26 @@
     </div>
   </div>
 </header>
+<div class="promo-bar">
+  <div class="promo-inner">
+    <span class="promo-text">Oferta de lanzamiento: accede hoy por <span style="text-decoration:line-through;opacity:.68">$39.99</span> <strong>$29.99 USD</strong> (pago único) · Termina en</span>
+    <div class="timer" aria-label="Tiempo restante de oferta">
+      <span id="t-hrs">00</span>:<span id="t-min">14</span>:<span id="t-sec">59</span>
+    </div>
+  </div>
+</div>
 
 <main class="wrap">
   <section class="hero">
-    <div class="pill">Descuento por lanzamiento · +900 fichas clínicas en PDF</div>
+    <div class="pill">Descuento por lanzamiento · +1.000 fichas clínicas en PDF</div>
     <h1>Deja de diseñar fichas desde cero. <em>Todo tu repertorio clínico</em> listo para usar.</h1>
-    <p class="lead">Más de 900 recursos en español latinoamericano —psicoeducación, registros, protocolos, material infanto-juvenil y cuadernillos— con campos rellenables e interactivos y listos para imprimir o enviar a tus pacientes.</p>
+    <p class="lead">Más de 1.000 recursos en español latinoamericano —psicoeducación, registros, protocolos, material infanto-juvenil y cuadernillos— con campos rellenables e interactivos y listos para imprimir o enviar a tus pacientes.</p>
     <div class="hero-cta">
       <a class="btn btn-lg" href="https://pay.hotmart.com/R108605945W" target="_blank" rel="noopener">Obtener acceso · <span style="text-decoration:line-through;opacity:.72;font-weight:500">$39.99</span> $29.99 USD →</a>
       <span class="micro">Aprovecha el precio en descuento por lanzamiento · Pago único con conversión automática a tu moneda local</span>
     </div>
     <div class="stats">
-      <div class="stat"><strong>901+</strong><span>Recursos en PDF</span></div>
+      <div class="stat"><strong>1.000+</strong><span>Recursos en PDF</span></div>
       <div class="stat"><strong>32</strong><span>Carpetas clínicas</span></div>
       <div class="stat"><strong>100%</strong><span>Rellenables e imprimibles</span></div>
       <div class="stat"><strong>∞</strong><span>Actualizaciones incluidas</span></div>
@@ -148,6 +180,28 @@
       </div>
     </div>
   </section>
+
+  <section id="buscador">
+    <div class="search-showcase">
+      <div class="search-copy">
+        <div class="kicker">Buscador clínico tipo Google</div>
+        <h2>Encuentra el recurso exacto mientras escuchas a tu paciente</h2>
+        <p>Tu paciente te cuenta lo que le aqueja en sesión y tú no pierdes tiempo navegando carpetas. Escribe cualquier palabra clave —un diagnóstico, una emoción o una técnica— y ubica al instante la ficha o protocolo específico.</p>
+        <ul class="search-list">
+          <li><b>✓</b><span>Búsqueda instantánea por motivo de consulta, síntoma o enfoque.</span></li>
+          <li><b>✓</b><span>Filtros rápidos para Psicoeducación, Registros, Protocolos y Evaluación.</span></li>
+          <li><b>✓</b><span>Vista previa en un clic antes de descargar o enviar a tu paciente.</span></li>
+        </ul>
+      </div>
+      <div class="search-media">
+        <img src="buscador.gif" alt="Demostración del buscador tipo Google de Vine a Terapia" loading="lazy" />
+      </div>
+    </div>
+    <div class="mid-cta">
+      <a class="btn btn-lg" href="https://pay.hotmart.com/R108605945W" target="_blank" rel="noopener">Obtener acceso inmediato · <span style="text-decoration:line-through;opacity:.72;font-weight:500">$39.99</span> $29.99 USD →</a>
+      <span class="micro">Pago único en tu moneda local · Acceso privado 24/7 tras acreditar el pago</span>
+    </div>
+  </section>
   <section id="muestras">
     <div class="sec-head">
       <div class="kicker">Vista previa real</div>
@@ -164,6 +218,37 @@
     </div>
   </section>
 
+  <section id="testimonios">
+    <div class="sec-head">
+      <div class="kicker">Experiencia en consulta</div>
+      <h2>Lo que dicen colegas que ya usan la biblioteca</h2>
+      <p>Psicólogos clínicos que ahorran horas de preparación semanal con material listo para usar.</p>
+    </div>
+    <div class="testimonials">
+      <article class="t-card">
+        <div>
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">“Antes perdía horas armando registros en Word cada semana. Ahora, mientras el paciente me cuenta lo que está viviendo, pongo una palabra en el buscador y tengo la ficha lista para enviar.”</p>
+        </div>
+        <div class="t-author"><strong>Psic. Valentina Morales</strong><span>Psicóloga Clínica · Atención Adultos</span></div>
+      </article>
+      <article class="t-card">
+        <div>
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">“Lo que más valoran mis pacientes es que los PDF son rellenables desde el celular. Hacen sus autorregistros en el día a día sin tener que imprimir nada.”</p>
+        </div>
+        <div class="t-author"><strong>Psic. Andrés Castro</strong><span>Enfoque Cognitivo-Conductual</span></div>
+      </article>
+      <article class="t-card">
+        <div>
+          <div class="t-stars">★★★★★</div>
+          <p class="t-quote">“Tener más de 1.000 recursos ordenados por categoría y con cuadernillos listos me salvó en consulta infanto-juvenil. Se paga solo en la primera semana.”</p>
+        </div>
+        <div class="t-author"><strong>Psic. Carolina Méndez</strong><span>Psicoterapia Infanto-Juvenil</span></div>
+      </article>
+    </div>
+  </section>
+
   <section>
     <div class="offer">
       <div style="display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#EDE6FA;font-size:11.5px;font-weight:800;letter-spacing:1.2px;padding:5px 14px;border-radius:99px;margin-bottom:14px;text-transform:uppercase">Precio especial por lanzamiento</div>
@@ -171,7 +256,7 @@
       <p class="sub">Aprovecha el precio en descuento por lanzamiento para ahorrar horas de preparación cada semana y entregar material visual profesional a tus pacientes.</p>
       <div class="price"><span style="text-decoration:line-through;opacity:.52;font-size:28px;margin-right:8px">$39.99</span> $29.99 <small>USD · Pago único</small></div>
       <div class="perks">
-        <div>✓ +900 fichas en PDF alta calidad</div>
+        <div>✓ +1.000 fichas en PDF alta calidad</div>
         <div>✓ Campos interactivos rellenables</div>
         <div>✓ Acceso inmediato tras el pago</div>
         <div>✓ Buscador web privado 24/7</div>
@@ -206,6 +291,21 @@
 <script>
 function openImg(src){document.getElementById('modalImg').src=src;document.getElementById('imgModal').classList.add('open')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('imgModal').classList.remove('open')});
+(function(){
+  const KEY='vat_promo_end',DUR=15*60*1000;
+  let end=Number(localStorage.getItem(KEY)||0);
+  if(!end||end<Date.now()){end=Date.now()+DUR;localStorage.setItem(KEY,end)}
+  const h=document.getElementById('t-hrs'),m=document.getElementById('t-min'),s=document.getElementById('t-sec');
+  function tick(){
+    let diff=Math.max(0,end-Date.now());
+    if(diff===0){end=Date.now()+DUR;localStorage.setItem(KEY,end);diff=DUR}
+    const sec=Math.floor(diff/1000);
+    h.textContent=String(Math.floor(sec/3600)).padStart(2,'0');
+    m.textContent=String(Math.floor((sec%3600)/60)).padStart(2,'0');
+    s.textContent=String(sec%60).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+})();
 </script>
 </body>
 </html>
