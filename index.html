@@ -133,6 +133,15 @@
   .modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(28,20,46,.72);padding:20px;align-items:center;justify-content:center}
   .modal.open{display:flex}
   .modal img{max-width:92vw;max-height:86vh;border-radius:12px;background:#fff}
+  .search-showcase{display:grid;grid-template-columns:1.05fr 1.15fr;gap:28px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:26px;padding:34px;margin-bottom:28px;box-shadow:0 10px 30px rgba(72,48,125,.07)}
+  .search-copy h2{font-family:var(--serif);font-size:clamp(24px,3.2vw,32px);line-height:1.15;margin-bottom:12px}
+  .search-copy p{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .search-list{list-style:none;display:grid;gap:9px;font-size:14px;color:var(--ink)}
+  .search-list li{display:flex;align-items:flex-start;gap:8px}
+  .search-list li b{color:var(--lilac)}
+  .search-media{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 32px rgba(72,48,125,.12)}
+  .search-media img{width:100%;height:auto;display:block}
+  @media(max-width:860px){.search-showcase{grid-template-columns:1fr;padding:22px}}
 </style>
 </head>
 <body>
@@ -257,6 +266,21 @@
   </section>
 
   <section class="reveal" id="recursos">
+    <div class="search-showcase">
+      <div class="search-copy">
+        <span class="kicker-line">Buscador clínico tipo Google</span>
+        <h2>Encuentra el recurso exacto mientras escuchas a tu paciente</h2>
+        <p>Tu paciente te cuenta lo que le aqueja en sesión y tú no pierdes tiempo navegando carpetas. Escribe cualquier palabra clave —un diagnóstico, una emoción o una técnica— y ubica al instante la ficha o protocolo específico.</p>
+        <ul class="search-list">
+          <li><b>✓</b><span>Búsqueda instantánea por motivo de consulta, síntoma o enfoque.</span></li>
+          <li><b>✓</b><span>Filtros rápidos para Psicoeducación, Registros, Protocolos y Evaluación.</span></li>
+          <li><b>✓</b><span>Vista previa en un clic antes de descargar o enviar a tu paciente.</span></li>
+        </ul>
+      </div>
+      <div class="search-media">
+        <img src="recursos/buscador.gif" alt="Demostración del buscador tipo Google de Vine a Terapia" loading="lazy" />
+      </div>
+    </div>
     <div class="res-band">
       <div class="sec-head" style="margin-bottom:10px">
         <span class="kicker-line">Biblioteca clínica</span>
